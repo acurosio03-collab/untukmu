@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#211d48">
+<title>Untuk Naura, Semangat Ya! 💗</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+:root{--night:#211d48;--pink:#ff8eaf;--rose:#ffe5ed;--cream:#fff9f5;--lav:#dcd5ff;--ink:#393252}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(160deg,#201c47,#4d3c70 52%,#f5b5c8);color:var(--ink);font-family:'DM Sans',sans-serif;min-height:100vh}
+button{font:inherit;cursor:pointer}
+button:focus-visible{outline:3px solid #ff8eaf;outline-offset:3px}
+.stars{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.star{position:absolute;color:#fff5c9;opacity:.75;animation:twinkle 2.5s ease-in-out infinite alternate}
+@keyframes twinkle{from{opacity:.25;transform:scale(.8)}to{opacity:1;transform:scale(1.15)}}
+.wrap{position:relative;z-index:1;width:min(760px,100%);margin:auto;padding:22px 16px 48px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:8px;color:white;margin-bottom:18px}
+.pill{border:1px solid #ffffff55;background:#ffffff18;color:white;border-radius:99px;padding:9px 13px;font-size:.82rem;backdrop-filter:blur(8px)}
+.hero{text-align:center;color:white;padding:38px 14px 30px}
+.moon{font-size:2.7rem;filter:drop-shadow(0 0 15px #ffe7a6);animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-8px)}}
+h1,h2,h3{font-family:'Playfair Display',serif}
+.hero h1{font-size:clamp(2.4rem,9vw,4.3rem);font-weight:500;font-style:italic;line-height:1.1;margin:15px 0}
+.hero p{max-width:490px;margin:0 auto 20px;line-height:1.8;color:#f9edf9}
+.hero .sub{font-size:.9rem;opacity:.9}
+.btn{border:0;border-radius:999px;padding:13px 19px;background:linear-gradient(110deg,#ff82a7,#ffb5c9);color:#54294c;font-weight:700;box-shadow:0 7px 22px #1b153b35;transition:transform .2s,filter .2s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.04)}
+.btn.secondary{background:#eee9ff;color:#493e78}
+.btn.ghost{background:#ffffff18;color:white;border:1px solid #ffffff60;box-shadow:none}
+.card{background:rgba(255,249,245,.97);border:1px solid #ffffffa8;border-radius:24px;padding:clamp(20px,5vw,34px);box-shadow:0 18px 50px #17112d35;margin:18px 0;position:relative;overflow:hidden}
+.card:after{content:"✿";position:absolute;right:14px;bottom:5px;font-size:3.5rem;color:#ffb5ca3d;pointer-events:none}
+.eyebrow{color:#c45b85;font-size:.76rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+h2{font-size:clamp(1.8rem,6vw,2.6rem);font-weight:500;margin:8px 0 15px;color:#44365e}
+p{line-height:1.85}
+.letter p{margin:0 0 16px}
+.signature{text-align:right;font-family:'Playfair Display',serif;font-size:1.4rem;font-style:italic;color:#c04f80;margin-top:25px}
+.section-head{text-align:center;color:white;margin:45px 0 18px}
+.section-head h2{color:white;margin-bottom:7px}
+.section-head p{margin-top:0;color:#f5eafa}
+.gombal-list{display:grid;gap:12px}
+.gombal{background:#fff8fb;border:1px solid #ffd1df;border-radius:17px;padding:15px 16px;text-align:left;color:#473752;display:flex;align-items:center;gap:13px;width:100%;box-shadow:0 6px 16px #21163a16}
+.gombal .num{display:grid;place-items:center;flex:0 0 36px;height:36px;border-radius:50%;background:#ffe0ea;color:#b64878;font-weight:700}
+.gombal small{display:block;color:#bd6688;margin-top:4px}
+.gombal.active{background:#fff0f5;border-color:#f48bb0}
+.reveal{margin-top:12px;padding:15px;border-radius:15px;background:#fff0f5;line-height:1.8;animation:appear .35s ease}
+@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.game-buttons{display:grid;gap:11px;margin-top:18px}
+.game-buttons .btn{width:100%;white-space:normal}
+.game-result{display:none;text-align:center;margin-top:18px;padding:20px 14px;background:#fff0f5;border-radius:18px;line-height:1.8}
+.game-result.show{display:block;animation:appear .4s ease}
+.big-emoji{font-size:3rem;display:block;margin-bottom:8px}
+.secret-box{background:linear-gradient(135deg,#fff1f5,#eeeaff);border:1px dashed #e7a0ba;border-radius:20px;text-align:center;padding:28px 18px}
+.secret-box .gift{font-size:3.5rem;display:block;animation:float 3s ease-in-out infinite}
+.secret-message{display:none;text-align:left;margin-top:20px}
+.secret-message.show{display:block;animation:appear .4s ease}
+.footer{text-align:center;color:#fff4ff;padding:26px 10px 0;line-height:1.9}
+.footer h2{color:white;font-size:clamp(1.9rem,7vw,3rem);line-height:1.2}
+.heart{position:fixed;z-index:5;pointer-events:none;animation:rise 2.8s ease-out forwards}
+@keyframes rise{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+.hidden{display:none!important}
+@media(min-width:650px){.gombal-list{grid-template-columns:1fr 1fr}.hero{padding-top:48px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+<main class="wrap">
+  <div class="topbar">
+    <button class="pill" id="musicBtn" aria-pressed="false">♫ Musik: Mati</button>
+    <button class="pill" id="soundBtn" aria-pressed="true">♡ Hati: Aktif</button>
+  </div>
+
+  <section class="hero" id="awal">
+    <div class="moon">☾ ✦</div>
+    <div class="sub">PESAN KECIL DARI GERDY, TEMANMU</div>
+    <h1>Untuk Naura,<br>yang Sedang Berjuang <span style="color:#ffb6d0">♥</span></h1>
+    <p>Pesan kecil dari teman untuk menemani kamu istirahat sejenak, menarik napas, dan mengingat bahwa kamu nggak harus menghadapi semuanya dengan sempurna.</p>
+    <p class="sub">Penerima: <b>NAURA</b> · Pengirim: <b>GERDY</b></p>
+    <button class="btn" id="openLetter">✉ Buka Surat Kecil Dari Gerdy</button>
+  </section>
+
+  <section class="card letter hidden" id="surat">
+    <div class="eyebrow">Untuk kamu yang hebat</div>
+    <h2>Hai, Naura... <span style="color:#ed7ca4">♥</span></h2>
+    <p>Sini, istirahat sebentar, ya.</p>
+    <p>Aku tahu kamu lagi capek. Mungkin pikiran kamu sekarang penuh banget. Ada laporan yang harus diselesaikan, banyak hal yang harus dipikirkan, dan mungkin ada hal lain yang bahkan susah kamu ceritakan.</p>
+    <p>Aku mungkin nggak bisa duduk tepat di samping kamu, nemenin setiap halaman laporan itu. Tapi kalau aku bisa melakukan satu hal malam ini, aku ingin jadi teman yang bisa bikin kamu tersenyum sedikit lagi.</p>
+    <p>Sayang, kamu nggak harus selalu kuat setiap waktu. Kamu boleh capek. Kamu boleh mengeluh. Kamu boleh berhenti sebentar buat menarik napas. Kamu juga boleh menangis kalau rasanya sudah terlalu penuh.</p>
+    <p>Jangan merasa gagal hanya karena hari ini kamu lelah. Bahkan orang sehebat kamu pun butuh istirahat.</p>
+    <p>Pelan-pelan aja, ya, Naura. Satu halaman demi satu halaman. Satu tugas demi satu tugas. Nggak harus semuanya selesai dalam satu tarikan napas. Yang penting kamu terus berusaha tanpa melupakan dirimu sendiri.</p>
+    <p>Kalau malam ini kamu merasa nggak cukup hebat, coba pinjam mataku sebentar. Biar kamu bisa melihat dirimu seperti aku melihatmu.</p>
+    <p>Aku melihat seseorang yang terus berusaha meskipun lelah. Seseorang yang tetap mencoba meskipun banyak hal memenuhi kepalanya. Seseorang yang mungkin nggak sadar bahwa dirinya sudah berjuang sejauh ini.</p>
+    <p>Naura, laporan itu memang penting. Tapi kamu juga penting. Masa depanmu penting, kesehatanmu penting, dan senyummu juga penting. Jangan sampai kamu sibuk menyelesaikan laporan sampai lupa memberi dirimu sendiri sedikit kasih sayang.</p>
+    <p>Minum dulu, ya. Istirahatkan matamu. Tarik napas perlahan. Kalau sudah agak tenang, kita lanjut lagi pelan-pelan. Kamu nggak harus menyelesaikan seluruh dunia malam ini.</p>
+    <p>Aku bangga sama kamu. Bukan cuma saat kamu berhasil menyelesaikan semuanya, tetapi juga saat kamu masih berusaha meskipun rasanya berat.</p>
+    <p>Semangat, perempuan manis. Kamu sudah berjalan sejauh ini. Jangan menyerah hanya karena perjalanan hari ini terasa melelahkan.</p>
+    <p>Kalau dunia sedang terlalu berisik, semoga kamu selalu ingat bahwa kamu pantas mendapatkan ketenangan. Kamu berharga, kamu hebat, dan kamu pantas disayangi.</p>
+    <p>Sekarang, coba senyum sedikit, Naura. Semoga surat kecil ini bisa membuat pikiranmu sedikit lebih ringan. ❤️</p>
+    <div class="signature">— Gerdy ♡</div>
+  </section>
+
+  <div class="section-head" id="gombalan">
+    <div class="eyebrow" style="color:#ffd8e6">BAB 02 · MISI BIKIN SENYUM</div>
+    <h2>Sekarang Giliran Aku<br>Bikin Kamu Senyum 💕</h2>
+    <p>Pilih satu kartu, lalu baca pelan-pelan, ya.</p>
+  </div>
+  <section class="card">
+    <div class="gombal-list" id="gombalList"></div>
+    <div class="reveal" id="gombalReveal" aria-live="polite">Pilih salah satu gombalan di atas. Siapa tahu kamu senyum-senyum sendiri. 🤭</div>
+  </section>
+
+  <div class="section-head">
+    <div class="eyebrow" style="color:#ffd8e6">BAB 03 · KAMU BUTUH APA?</div>
+    <h2>Mini Game Penenang Hati 🫂</h2>
+    <p>Pilih yang paling kamu butuhkan saat ini.</p>
+  </div>
+  <section class="card">
+    <div style="text-align:center;font-size:2.5rem">🌙 💗 🌷</div>
+    <h3 style="text-align:center;font-size:1.5rem">Naura, sekarang kamu butuh apa?</h3>
+    <div class="game-buttons">
+      <button class="btn" data-game="hug">🫂 Pelukan virtual</button>
+      <button class="btn secondary" data-game="flirt">💗 Gombalan tambahan</button>
+      <button class="btn ghost" style="background:#65568c;color:white" data-game="calm">🌙 Kata-kata penenang</button>
+    </div>
+    <div class="game-result" id="gameResult" aria-live="polite"></div>
+  </section>
+
+  <div class="section-head">
+    <div class="eyebrow" style="color:#ffd8e6">BAB 04 · RAHASIA KECIL</div>
+    <h2>Ada Pesan Buat Kamu 🎁</h2>
+    <p>Katanya ada satu hal yang belum selesai aku bilang...</p>
+  </div>
+  <section class="card">
+    <div class="secret-box">
+      <span class="gift">🎁</span>
+      <h3 style="font-size:1.6rem">Pesan Rahasia dari Gerdy</h3>
+      <p>Tekan tombol di bawah untuk membuka pesan kecil ini.</p>
+      <button class="btn" id="secretBtn">💌 Buka Pesan Rahasia</button>
+      <div class="secret-message" id="secretMessage">
+        <p>Naura, aku mungkin nggak selalu tahu bagaimana cara terbaik untuk membuatmu merasa lebih baik. Aku juga nggak bisa menjanjikan semua masalahmu akan langsung hilang.</p>
+        <p>Tapi aku ingin kamu tahu bahwa perasaanmu itu penting. Kamu nggak perlu berpura-pura baik-baik saja hanya untuk terlihat kuat.</p>
+        <p>Kalau kamu ingin bercerita, aku ingin mendengarkan. Kalau kamu ingin diam, aku akan menghargai itu. Kalau kamu sedang butuh waktu untuk dirimu sendiri, aku juga akan mengerti.</p>
+        <p>Aku nggak ingin memaksamu tersenyum ketika kamu sedang lelah. Aku cuma berharap pesan kecil dari temanmu ini bisa jadi salah satu alasan kamu tersenyum lagi.</p>
+        <p>Kamu nggak harus menunggu semua tugas selesai untuk memberi dirimu waktu istirahat. Kamu tetap pantas merasa tenang, bahkan saat masih berjuang.</p>
+        <p>Semangat, Naura. Aku percaya kamu bisa melewati ini satu langkah demi satu langkah. Jangan lupa jaga diri, ya. ❤️</p>
+        <div class="signature">GERDY ♡</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div style="font-size:2rem">☾ ✨ ♡ ✨ ☽</div>
+    <h2>Laporannya boleh banyak,<br>tapi jangan lupa istirahat, ya, Naura.</h2>
+    <p>Nggak harus langsung melupakan semua masalahmu. Cukup beri hatimu kesempatan untuk bernapas, lalu lanjutkan semuanya perlahan.</p>
+    <p>Aku bangga sama kamu, perempuan hebat. Semoga surat kecil ini bisa menemani malammu dengan sedikit rasa hangat.</p>
+    <p><b>Dari GERDY,<br>untuk NAURA yang sedang berjuang. 💗</b></p>
+    <button class="btn" id="againBtn">♡ Baca Lagi Kalau Lagi Capek</button>
+  </footer>
+</main>
+
+<audio id="music" loop preload="none">
+  <!-- Ganti nilai src dengan URL file musik instrumental milikmu jika ingin musik tersedia. -->
+</audio>
+<script>
+const starBox=document.getElementById('stars');
+for(let i=0;i<65;i++){
+  const s=document.createElement('span');s.className='star';s.textContent=Math.random()>.5?'✦':'·';
+  s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';
+  s.style.fontSize=(8+Math.random()*13)+'px';s.style.animationDelay=(Math.random()*3)+'s';starBox.appendChild(s);
+}
+const gombals=[
+['Kok bukan tugas laporan?','Naura, kamu tahu nggak kenapa aku nggak pernah mau jadi tugas laporanmu?','Karena kalau aku jadi laporanmu, aku takut kamu begadang terus demi menyelesaikanku. Padahal yang aku mau, kamu tidur nyenyak dan bangun dengan senyum paling cantik. 🥹❤️'],
+['Pelukan jadi obat','Kalau capekmu bisa aku ubah jadi sesuatu, aku ingin mengubahnya jadi waktu istirahat yang nyaman. Biar kamu ingat, kamu boleh berhenti sebentar saat semuanya terasa berat. 🫂'],
+['Kesimpulan terbaik','Orang lain mungkin sibuk mencari kesimpulan di akhir laporan. Kalau aku, kesimpulan dari semua pikiran panjangku selalu sama: aku bersyukur bisa mengenal kamu, Naura. 💗'],
+['Obat rindu','Katanya obat capek itu istirahat. Tapi kenapa setiap kali membayangkan kamu tersenyum, aku ikut merasa tenang? Apa jangan-jangan senyummu punya izin praktik sebagai obat rindu? 😭❤️'],
+['Bukan menghapus cerita','Kalau aku bisa mengurangi satu hal dari harimu, aku ingin mengurangi rasa capek dan pusingmu. Setidaknya, semoga pesan sederhana dari temanmu ini bikin kamu merasa sedikit lebih ditemani.'],
+['Kamu sudah istimewa','Kamu nggak harus selalu terlihat kuat atau sempurna. Kamu cukup jadi dirimu sendiri, dengan segala cerita, lelah, tawa, dan perjuanganmu. Itu sudah cukup untuk membuatmu jadi orang yang berharga. 🌷'],
+['Halaman terakhir','Kalau laporanmu punya halaman terakhir, semoga setelah itu kamu bisa istirahat cukup, pikiran lebih tenang, dan punya banyak alasan buat tersenyum lagi.'],
+['Paket kiriman','Kalau aku bisa mengirim sesuatu lewat layar ini, aku nggak akan mengirim tugas tambahan. Aku bakal mengirim minuman favoritmu dan satu pesan: kamu sudah berusaha keras hari ini, Naura. Jangan lupa istirahat, ya. 💌']
+];
+const list=document.getElementById('gombalList'),reveal=document.getElementById('gombalReveal');
+gombals.forEach((g,i)=>{
+ const b=document.createElement('button');b.className='gombal';b.innerHTML=`<span class="num">${i+1}</span><span><b>${g[0]}</b><small>Gombalan ${i+1} · ketuk untuk membuka</small></span>`;
+ b.addEventListener('click',()=>{
+   document.querySelectorAll('.gombal').forEach(x=>x.classList.remove('active'));b.classList.add('active');
+   if(g.length===3){reveal.innerHTML=`<b>${g[1]}</b><br><br>${g[2]}`}else{reveal.textContent=g[1]}
+   burstHearts(5);
+ });list.appendChild(b);
+});
+const gameResult=document.getElementById('gameResult');
+document.querySelectorAll('[data-game]').forEach(b=>b.addEventListener('click',()=>{
+ const type=b.dataset.game;gameResult.classList.add('show');
+ if(type==='hug')gameResult.innerHTML='<span class="big-emoji">🫂💗</span><b>Sini, Naura, peluk virtual dulu...</b><br>Andai aku ada di dekatmu sebagai teman, mungkin aku bakal bilang, “Istirahat dulu, Naura. Tarik napas, jangan dipaksa terus.” Kamu nggak harus cerita kalau belum siap. Kadang ditemani teman dan istirahat sebentar juga sudah membantu.';
+ if(type==='flirt'){const g=gombals[Math.floor(Math.random()*gombals.length)];gameResult.innerHTML=`<span class="big-emoji">💘</span><b>${g[0]}</b><br>${g[g.length-1]}`}
+ if(type==='calm')gameResult.innerHTML='<span class="big-emoji">🌙</span><b>Tarik napas perlahan, Naura.</b><br>Tarik napas... tahan sebentar... lalu lepaskan pelan-pelan. Kamu nggak harus memikirkan semuanya sekaligus. Untuk beberapa detik ini, cukup fokus pada dirimu sendiri. Minum air, istirahatkan mata, lalu lanjutkan satu langkah kecil saat sudah siap. Kamu sudah berusaha keras hari ini. ❤️';
+ burstHearts(7);
+}));
+document.getElementById('openLetter').addEventListener('click',()=>{document.getElementById('surat').classList.remove('hidden');document.getElementById('surat').scrollIntoView({behavior:'smooth',block:'start'});burstHearts(10)});
+document.getElementById('secretBtn').addEventListener('click',()=>{const m=document.getElementById('secretMessage');m.classList.toggle('show');document.getElementById('secretBtn').textContent=m.classList.contains('show')?'💗 Tutup Pesan Rahasia':'💌 Buka Pesan Rahasia';if(m.classList.contains('show'))burstHearts(12)});
+document.getElementById('againBtn').addEventListener('click',()=>{document.getElementById('surat').classList.remove('hidden');document.getElementById('awal').scrollIntoView({behavior:'smooth'});burstHearts(8)});
+let heartsOn=true;
+document.getElementById('soundBtn').addEventListener('click',e=>{heartsOn=!heartsOn;e.currentTarget.textContent=heartsOn?'♡ Hati: Aktif':'♡ Hati: Mati';e.currentTarget.setAttribute('aria-pressed',String(heartsOn))});
+function burstHearts(n=6){if(!heartsOn)return;for(let i=0;i<n;i++){const h=document.createElement('span');h.className='heart';h.textContent=['💗','♡','💕','✨'][Math.floor(Math.random()*4)];h.style.left=(10+Math.random()*80)+'vw';h.style.bottom='-20px';h.style.fontSize=(16+Math.random()*18)+'px';h.style.animationDelay=(Math.random()*.5)+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),3300)}}
+const music=document.getElementById('music');document.getElementById('musicBtn').addEventListener('click',async e=>{
+ if(!music.src){alert('Musik belum ditambahkan. Untuk mengaktifkan musik, isi src pada elemen audio dengan URL file instrumental yang kamu punya.');return}
+ if(music.paused){try{await music.play();e.currentTarget.textContent='♫ Musik: Nyala';e.currentTarget.setAttribute('aria-pressed','true')}catch(err){alert('Musik belum bisa diputar. Coba periksa file musiknya.')}}else{music.pause();e.currentTarget.textContent='♫ Musik: Mati';e.currentTarget.setAttribute('aria-pressed','false')}
+});
+</script>
+</body>
+</html>
